@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTOR PRAKASH - शिक्षा का बेहतरीन प्लेटफ़ॉर्म</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Hind', sans-serif;
+        }
+        
+        :root {
+            --primary: #4e54c8;
+            --secondary: #8f94fb;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #f94144;
+        }
+        
+        body {
+            background: linear-gradient(to right, #f5f7fa, #e4e8f0);
+            color: #333;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo i {
+            font-size: 32px;
+            color: white;
+            background: var(--accent);
+            padding: 10px;
+            border-radius: 50%;
+        }
+        
+        .logo h1 {
+            font-weight: 700;
+            font-size: 24px;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+        
+        nav a:hover {
+            color: white;
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+        
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+        
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 15px;
+        }
+        
+        .language-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+        
+        .language-btn.active {
+            opacity: 1;
+            font-weight: 600;
+        }
+        
+        /* Login/Signup Forms */
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+        
+        .auth-form {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .auth-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--dark);
+            font-size: 28px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        .form-switch {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .form-switch a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .forgot-password {
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+        
+        .forgot-password a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        /* Dashboard Styles */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+        }
+        
+        .sidebar h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light);
+            color: var(--dark);
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            color: var(--dark);
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .sidebar a:hover, .sidebar a.active {
+            background: var(--light);
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Course Cards */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid #e9ecef;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-img {
+            height: 160px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+            position: relative;
+        }
+        
+        .course-content {
+            padding: 20px;
+        }
+        
+        .course-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-size: 18px;
+        }
+        
+        .course-content p {
+            color: #6c757d;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: var(--primary) !important;
+            font-size: 18px !important;
+        }
+        
+        /* Admin Styles */
+        .admin-panel {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+        }
+        
+        .admin-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .table th, .table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .table th {
+            background: var(--light);
+            font-weight: 600;
+        }
+        
+        .table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .status-active {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-inactive {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .close {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Tabs */
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab.active {
+            border-bottom: 3px solid var(--primary);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Alert */
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-danger {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Payment Options */
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .payment-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-option:hover {
+            border-color: var(--primary);
+            background: #f8f9fa;
+        }
+        
+        .payment-option input {
+            margin-right: 10px;
+        }
+        
+        .payment-option label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            margin: 0;
+        }
+        
+        .qr-code {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .qr-code img {
+            max-width: 200px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        /* Course Materials */
+        .materials-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .material-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        
+        .material-item i {
+            margin-right: 10px;
+            font-size: 20px;
+            color: var(--primary);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>TUTOR PRAKASH</h1>
+                </div>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="#" class="nav-link" data-target="home">होम</a></li>
+                        <li><a href="#" class="nav-link" data-target="courses">कोर्सेज</a></li>
+                        <li><a href="#" class="nav-link" data-target="about">हमारे बारे में</a></li>
+                        <li><a href="#" class="nav-link" data-target="contact">संपर्क</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switcher">
+                    <button class="language-btn active" data-lang="hi">हिंदी</button>
+                    <span>|</span>
+                    <button class="language-btn" data-lang="en">English</button>
+                </div>
+                <div class="auth-buttons" id="auth-buttons">
+                    <button class="btn btn-outline" id="login-btn">लॉग इन</button>
+                    <button class="btn btn-primary" id="signup-btn">रजिस्टर</button>
+                </div>
+                <div id="user-menu" style="display: none;">
+                    <button class="btn btn-success" id="dashboard-btn">डैशबोर्ड</button>
+                    <button class="btn btn-outline" id="logout-btn">लॉग आउट</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>शिक्षा का <span>बेहतरीन प्लेटफ़ॉर्म</span> आपके दरवाजे पर</h2>
+                    <p>TUTOR PRAKASH एक रिवोल्यूशनरी टीचिंग ऐप है जो छात्रों को एक्सपर्ट एजुकेटर्स से जोड़ता है। हजारों कोर्सेज, इंटरएक्टिव लेसन्स और लर्निंग रिसोर्सेज तक पहुंचें।</p>
+                    <button class="btn btn-primary" id="start-learning-btn">अभी सीखना शुरू करें</button>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-content">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>जानें, बढ़ें, सफल होें</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login/Signup Forms -->
+        <section id="auth-section" class="auth-container" style="display: none;">
+            <div class="tabs">
+                <div class="tab active" data-tab="login">लॉग इन</div>
+                <div class="tab" data-tab="signup">रजिस्टर</div>
+            </div>
+            
+            <div class="tab-content active" id="login-tab">
+                <div class="auth-form">
+                    <h2>अपने अकाउंट में लॉग इन करें</h2>
+                    <div class="form-group">
+                        <label for="login-email">ईमेल</label>
+                        <input type="email" id="login-email" placeholder="अपना ईमेल दर्ज करें">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">पासवर्ड</label>
+                        <input type="password" id="login-password" placeholder="अपना पासवर्ड दर्ज करें">
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#" id="forgot-password-link">पासवर्ड भूल गए?</a>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-role">लॉग इन टाइप चुनें</label>
+                        <select id="login-role">
+                            <option value="student">छात्र</option>
+                            <option value="teacher">शिक्षक</option>
+                            <option value="owner">मालिक</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;" id="login-submit">लॉग इन</button>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="signup-tab">
+                <div class="auth-form">
+                    <h2>नया अकाउंट बनाएं</h2>
+                    <div class="form-group">
+                        <label for="signup-name">पूरा नाम</label>
+                        <input type="text" id="signup-name" placeholder="अपना पूरा नाम दर्ज करें">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">ईमेल</label>
+                        <input type="email" id="signup-email" placeholder="अपना ईमेल दर्ज करें">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">पासवर्ड</label>
+                        <input type="password" id="signup-password" placeholder="अपना पासवर्ड बनाएं">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-role">अकाउंट टाइप चुनें</label>
+                        <select id="signup-role">
+                            <option value="student">छात्र</option>
+                            <option value="teacher">शिक्षक</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;" id="signup-submit">अकाउंट बनाएं</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Dashboard -->
+        <section id="student-dashboard" class="section" style="display: none;">
+            <h2 style="margin-bottom: 20px;">छात्र डैशबोर्ड</h2>
+            <div class="dashboard">
+                <div class="sidebar">
+                    <h3>मेन्यू</h3>
+                    <ul>
+                        <li><a href="#" class="dashboard-link active" data-target="available-courses">उपलब्ध कोर्सेज</a></li>
+                        <li><a href="#" class="dashboard-link" data-target="my-courses">मेरे कोर्सेज</a></li>
+                        <li><a href="#" class="dashboard-link" data-target="purchase-history">खरीदी का इतिहास</a></li>
+                        <li><a href="#" class="dashboard-link" data-target="profile">प्रोफाइल</a></li>
+                    </ul>
+                </div>
+                <div class="main-content">
+                    <div id="dashboard-content">
+                        <div id="available-courses" class="tab-content active">
+                            <h3>उपलब्ध कोर्सेज</h3>
+                            <div class="courses-grid" id="courses-container">
+                                <!-- Courses will be loaded dynamically -->
+                            </div>
+                        </div>
+                        <div id="my-courses" class="tab-content">
+                            <h3>मेरे खरीदे हुए कोर्सेज</h3>
+                            <div class="courses-grid" id="my-courses-container">
+                                <!-- Purchased courses will be loaded dynamically -->
+                            </div>
+                        </div>
+                        <div id="purchase-history" class="tab-content">
+                            <h3>खरीदी का इतिहास</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>कोर्स नाम</th>
+                                        <th>तारीख</th>
+                                        <th>कीमत</th>
+                                        <th>स्थिति</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="purchase-history-body">
+                                    <!-- Purchase history will be loaded dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="profile" class="tab-content">
+                            <h3>प्रोफाइल</h3>
+                            <div class="form-group">
+                                <label for="profile-name">नाम</label>
+                                <input type="text" id="profile-name" placeholder="अपना नाम दर्ज करें">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-email">ईमेल</label>
+                                <input type="email" id="profile-email" placeholder="अपना ईमेल दर्ज करें" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-password">नया पासवर्ड (बदलने के लिए)</label>
+                                <input type="password" id="profile-password" placeholder="नया पासवर्ड दर्ज करें">
+                            </div>
+                            <button class="btn btn-primary" id="update-profile">अपडेट प्रोफाइल</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teacher Dashboard -->
+        <section id="teacher-dashboard" class="section" style="display: none;">
+            <h2 style="margin-bottom: 20px;">शिक्षक डैशबोर्ड</h2>
+            <div class="dashboard">
+                <div class="sidebar">
+                    <h3>मेन्यू</h3>
+                    <ul>
+                        <li><a href="#" class="teacher-link active" data-target="teacher-courses">मेरे कोर्सेज</a></li>
+                        <li><a href="#" class="teacher-link" data-target="add-course">नया कोर्स जोड़ें</a></li>
+                        <li><a href="#" class="teacher-link" data-target="teacher-earnings">आय विवरण</a></li>
+                        <li><a href="#" class="teacher-link" data-target="teacher-profile">प्रोफाइल</a></li>
+                    </ul>
+                </div>
+                <div class="main-content">
+                    <div id="teacher-content">
+                        <div id="teacher-courses" class="tab-content active">
+                            <h3>मेरे कोर्सेज</h3>
+                            <button class="btn btn-primary" id="teacher-add-course-btn">नया कोर्स जोड़ें</button>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>कोर्स नाम</th>
+                                        <th>श्रेणी</th>
+                                        <th>कीमत</th>
+                                        <th>बिक्री</th>
+                                        <th>क्रियाएं</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="teacher-courses-body">
+                                    <!-- Teacher courses will be loaded dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="add-course" class="tab-content">
+                            <h3>नया कोर्स जोड़ें</h3>
+                            <div class="form-group">
+                                <label for="teacher-course-name">कोर्स नाम</label>
+                                <input type="text" id="teacher-course-name" placeholder="कोर्स का नाम दर्ज करें">
+                            </div>
+                            <div class="form-group">
+                                <label for="teacher-course-category">श्रेणी</label>
+                                <input type="text" id="teacher-course-category" placeholder="कोर्स की श्रेणी दर्ज करें">
+                            </div>
+                            <div class="form-group">
+                                <label for="teacher-course-price">कीमत (₹)</label>
+                                <input type="number" id="teacher-course-price" placeholder="कोर्स की कीमत दर्ज करें">
+                            </div>
+                            <div class="form-group">
+                                <label for="teacher-course-description">विवरण</label>
+                                <textarea id="teacher-course-description" placeholder="कोर्स का विवरण दर्ज करें" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="course-materials">कोर्स सामग्री जोड़ें</label>
+                                <div class="materials-list">
+                                    <div class="material-item">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>PDF नोट्स</span>
+                                        <input type="file" accept=".pdf" style="margin-left: auto;">
+                                    </div>
+                                    <div class="material-item">
+                                        <i class="fab fa-youtube"></i>
+                                        <span>YouTube लिंक</span>
+                                        <input type="text" placeholder="YouTube वीडियो लिंक" style="margin-left: auto; width: 200px;">
+                                    </div>
+                                    <div class="material-item">
+                                        <i class="fas fa-video"></i>
+                                        <span>Zoom लिंक</span>
+                                        <input type="text" placeholder="Zoom मीटिंग लिंक" style="margin-left: auto; width: 200px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="teacher-save-course-btn">कोर्स सहेजें</button>
+                        </div>
+                        <div id="teacher-earnings" class="tab-content">
+                            <h3>आय विवरण</h3>
+                            <div class="alert alert-info">
+                                <strong>कुल आय: ₹12,500</strong> (20% प्लेटफ़ॉर्म शुल्क घटाकर)
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>कोर्स नाम</th>
+                                        <th>बिक्री</th>
+                                        <th>कमाई</th>
+                                        <th>तारीख</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>गणित मास्टरी</td>
+                                        <td>15</td>
+                                        <td>₹5,999</td>
+                                        <td>15/08/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>विज्ञान एक्सपेरिमेंट्स</td>
+                                        <td>10</td>
+                                        <td>₹3,199</td>
+                                        <td>20/08/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>प्रोग्रामिंग बेसिक्स</td>
+                                        <td>8</td>
+                                        <td>₹3,302</td>
+                                        <td>25/08/2023</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="teacher-profile" class="tab-content">
+                            <h3>प्रोफाइल</h3>
+                            <div class="form-group">
+                                <label for="teacher-profile-name">नाम</label>
+                                <input type="text" id="teacher-profile-name" placeholder="अपना नाम दर्ज करें">
+                            </div>
+                            <div class="form-group">
+                                <label for="teacher-profile-email">ईमेल</label>
+                                <input type="email" id="teacher-profile-email" placeholder="अपना ईमेल दर्ज करें" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="teacher-profile-bank">बैंक खाता विवरण</label>
+                                <input type="text" id="teacher-profile-bank" placeholder="बैंक खाता संख्या">
+                            </div>
+                            <div class="form-group">
+                                <label for="teacher-profile-ifsc">IFSC कोड</label>
+                                <input type="text" id="teacher-profile-ifsc" placeholder="IFSC कोड">
+                            </div>
+                            <div class="form-group">
+                                <label for="teacher-profile-password">नया पासवर्ड (बदलने के लिए)</label>
+                                <input type="password" id="teacher-profile-password" placeholder="नया पासवर्ड दर्ज करें">
+                            </div>
+                            <button class="btn btn-primary" id="update-teacher-profile">अपडेट प्रोफाइल</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Owner Dashboard -->
+        <section id="owner-dashboard" class="section" style="display: none;">
+            <h2 style="margin-bottom: 20px;">मालिक डैशबोर्ड</h2>
+            <div class="dashboard">
+                <div class="sidebar">
+                    <h3>मेन्यू</h3>
+                    <ul>
+                        <li><a href="#" class="owner-link active" data-target="owner-students">छात्र</a></li>
+                        <li><a href="#" class="owner-link" data-target="owner-teachers">शिक्षक</a></li>
+                        <li><a href="#" class="owner-link" data-target="owner-transactions">लेन-देन</a></li>
+                        <li><a href="#" class="owner-link" data-target="owner-courses">कोर्सेज</a></li>
+                    </ul>
+                </div>
+                <div class="main-content">
+                    <div id="owner-content">
+                        <div id="owner-students" class="tab-content active">
+                            <h3>छात्र प्रबंधन</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>नाम</th>
+                                        <th>ईमेल</th>
+                                        <th>पंजीकरण तिथि</th>
+                                        <th>स्थिति</th>
+                                        <th>क्रियाएं</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>राहुल शर्मा</td>
+                                        <td>rahul@example.com</td>
+                                        <td>10/08/2023</td>
+                                        <td><span class="status-badge status-active">सक्रिय</span></td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm">अक्षम करें</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>प्रिया पाटिल</td>
+                                        <td>priya@example.com</td>
+                                        <td>15/08/2023</td>
+                                        <td><span class="status-badge status-active">सक्रिय</span></td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm">अक्षम करें</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>अमित वर्मा</td>
+                                        <td>amit@example.com</td>
+                                        <td>20/08/2023</td>
+                                        <td><span class="status-badge status-inactive">निष्क्रिय</span></td>
+                                        <td>
+                                            <button class="btn btn-success btn-sm">सक्षम करें</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="owner-teachers" class="tab-content">
+                            <h3>शिक्षक प्रबंधन</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>नाम</th>
+                                        <th>ईमेल</th>
+                                        <th>विशेषज्ञता</th>
+                                        <th>स्थिति</th>
+                                        <th>क्रियाएं</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>डॉ. राजेश कुमार</td>
+                                        <td>rajesh@example.com</td>
+                                        <td>गणित</td>
+                                        <td><span class="status-badge status-active">सक्रिय</span></td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm">अक्षम करें</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>प्रो. सीमा सिंह</td>
+                                        <td>seema@example.com</td>
+                                        <td>विज्ञान</td>
+                                        <td><span class="status-badge status-active">सक्रिय</span></td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm">अक्षम करें</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>अनिल शर्मा</td>
+                                        <td>anil@example.com</td>
+                                        <td>प्रोग्रामिंग</td>
+                                        <td><span class="status-badge status-inactive">निष्क्रिय</span></td>
+                                        <td>
+                                            <button class="btn btn-success btn-sm">सक्षम करें</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="owner-transactions" class="tab-content">
+                            <h3>लेन-देन इतिहास</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>लेन-देन ID</th>
+                                        <th>छात्र</th>
+                                        <th>कोर्स</th>
+                                        <th>शिक्षक</th>
+                                        <th>राशि</th>
+                                        <th>तारीख</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#TXN1001</td>
+                                        <td>राहुल शर्मा</td>
+                                        <td>गणित मास्टरी</td>
+                                        <td>डॉ. राजेश कुमार</td>
+                                        <td>₹499</td>
+                                        <td>12/08/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TXN1002</td>
+                                        <td>प्रिया पाटिल</td>
+                                        <td>विज्ञान एक्सपेरिमेंट्स</td>
+                                        <td>प्रो. सीमा सिंह</td>
+                                        <td>₹399</td>
+                                        <td>14/08/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TXN1003</td>
+                                        <td>अमित वर्मा</td>
+                                        <td>प्रोग्रामिंग बेसिक्स</td>
+                                        <td>अनिल शर्मा</td>
+                                        <td>₹799</td>
+                                        <td>16/08/2023</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="owner-courses" class="tab-content">
+                            <h3>सभी कोर्सेज</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>कोर्स नाम</th>
+                                        <th>शिक्षक</th>
+                                        <th>श्रेणी</th>
+                                        <th>कीमत</th>
+                                        <th>बिक्री</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>गणित मास्टरी</td>
+                                        <td>डॉ. राजेश कुमार</td>
+                                        <td>गणित</td>
+                                        <td>₹499</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>विज्ञान एक्सपेरिमेंट्स</td>
+                                        <td>प्रो. सीमा सिंह</td>
+                                        <td>विज्ञान</td>
+                                        <td>₹399</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>प्रोग्रामिंग बेसिक्स</td>
+                                        <td>अनिल शर्मा</td>
+                                        <td>कंप्यूटर विज्ञान</td>
+                                        <td>₹799</td>
+                                        <td>8</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Add Course Modal -->
+    <div class="modal" id="add-course-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>नया कोर्स जोड़ें</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="form-group">
+                <label for="course-name">कोर्स नाम</label>
+                <input type="text" id="course-name" placeholder="कोर्स का नाम दर्ज करें">
+            </div>
+            <div class="form-group">
+                <label for="course-category">श्रेणी</label>
+                <input type="text" id="course-category" placeholder="कोर्स की श्रेणी दर्ज करें">
+            </div>
+            <div class="form-group">
+                <label for="course-price">कीमत (₹)</label>
+                <input type="number" id="course-price" placeholder="कोर्स की कीमत दर्ज करें">
+            </div>
+            <div class="form-group">
+                <label for="course-description">विवरण</label>
+                <textarea id="course-description" placeholder="कोर्स का विवरण दर्ज करें" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" id="save-course-btn">कोर्स सहेजें</button>
+        </div>
+    </div>
+
+    <!-- Purchase Course Modal -->
+    <div class="modal" id="purchase-course-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="purchase-course-title">कोर्स खरीदें</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div id="purchase-alert"></div>
+            
+            <div class="payment-options">
+                <h4>भुगतान विकल्प चुनें</h4>
+                <div class="payment-option">
+                    <input type="radio" id="upi" name="payment-method" value="upi" checked>
+                    <label for="upi">
+                        <i class="fas fa-mobile-alt"></i>
+                        UPI भुगतान
+                    </label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="qr" name="payment-method" value="qr">
+                    <label for="qr">
+                        <i class="fas fa-qrcode"></i>
+                        QR कोड स्कैन करें
+                    </label>
+                </div>
+            </div>
+            
+            <div id="upi-payment" class="payment-method">
+                <div class="form-group">
+                    <label for="upi-id">UPI ID</label>
+                    <input type="text" id="upi-id" placeholder="yourname@upi">
+                </div>
+                <button class="btn btn-primary" style="width: 100%;" id="pay-with-upi">भुगतान करें</button>
+            </div>
+            
+            <div id="qr-payment" class="payment-method" style="display: none;">
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=UPI_ID:owner@tutorprakash&amp;amount=500" alt="QR Code">
+                    <p>उपरोक्त QR कोड स्कैन करके भुगतान करें</p>
+                </div>
+                <div class="form-group">
+                    <label for="transaction-id">लेन-देन ID</label>
+                    <input type="text" id="transaction-id" placeholder="भुगतान后 लेन-देन ID दर्ज करें">
+                </div>
+                <button class="btn btn-primary" style="width: 100%;" id="verify-payment">भुगतान सत्यापित करें</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal" id="forgot-password-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>पासवर्ड रीसेट करें</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="form-group">
+                <label for="reset-email">ईमेल पता</label>
+                <input type="email" id="reset-email" placeholder="अपना ईमेल पता दर्ज करें">
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" id="reset-password-btn">पासवर्ड रीसेट लिंक भेजें</button>
+        </div>
+    </div>
+
+    <script>
+        // Data storage (in a real app, this would be a backend)
+        const users = JSON.parse(localStorage.getItem('users')) || [
+            { id: 1, email: 'admin@tutorprakash.com', password: 'admin123', name: 'एडमिन यूजर', role: 'admin' },
+            { id: 2, email: 'student@tutorprakash.com', password: 'student123', name: 'राहुल छात्र', role: 'student' },
+            { id: 3, email: 'teacher@tutorprakash.com', password: 'teacher123', name: 'डॉ. राजेश कुमार', role: 'teacher', expertise: 'गणित', bankDetails: '' },
+            { id: 4, email: 'owner@tutorprakash.com', password: 'owner123', name: 'प्लेटफ़ॉर्म मालिक', role: 'owner' }
+        ];
+        
+        const categories = JSON.parse(localStorage.getItem('categories')) || [
+            { id: 1, name: 'गणित' },
+            { id: 2, name: 'विज्ञान' },
+            { id: 3, name: 'कंप्यूटर विज्ञान' },
+            { id: 4, name: 'भाषाएँ' }
+        ];
+        
+        const courses = JSON.parse(localStorage.getItem('courses')) || [
+            { id: 1, name: 'गणित मास्टरी', category: 'गणित', price: 499, description: 'बेसिक्स से एडवांस्ड कॉन्सेप्ट्स तक', teacherId: 3 },
+            { id: 2, name: 'विज्ञान एक्सपेरिमेंट्स', category: 'विज्ञान', price: 399, description: 'हैंड्स-ऑन लर्निंग फॉर ऑल एजेज', teacherId: 3 },
+            { id: 3, name: 'प्रोग्रामिंग बेसिक्स', category: 'कंप्यूटर विज्ञान', price: 799, description: 'आज ही शुरू करें अपनी कोडिंग जर्नी', teacherId: 3 }
+        ];
+        
+        const purchases = JSON.parse(localStorage.getItem('purchases')) || [];
+        
+        // Save initial data
+        if (!localStorage.getItem('users')) {
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+        if (!localStorage.getItem('categories')) {
+            localStorage.setItem('categories', JSON.stringify(categories));
+        }
+        if (!localStorage.getItem('courses')) {
+            localStorage.setItem('courses', JSON.stringify(courses));
+        }
+        if (!localStorage.getItem('purchases')) {
+            localStorage.setItem('purchases', JSON.stringify(purchases));
+        }
+        
+        // DOM Elements
+        const loginBtn = document.getElementById('login-btn');
+        const signupBtn = document.getElementById('signup-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const dashboardBtn = document.getElementById('dashboard-btn');
+        const startLearningBtn = document.getElementById('start-learning-btn');
+        const authSection = document.getElementById('auth-section');
+        const loginSubmit = document.getElementById('login-submit');
+        const signupSubmit = document.getElementById('signup-submit');
+        const studentDashboard = document.getElementById('student-dashboard');
+        const teacherDashboard = document.getElementById('teacher-dashboard');
+        const ownerDashboard = document.getElementById('owner-dashboard');
+        const authButtons = document.getElementById('auth-buttons');
+        const userMenu = document.getElementById('user-menu');
+        const addCourseBtn = document.getElementById('add-course-btn');
+        const addCategoryBtn = document.getElementById('add-category-btn');
+        const addCourseModal = document.getElementById('add-course-modal');
+        const purchaseCourseModal = document.getElementById('purchase-course-modal');
+        const forgotPasswordModal = document.getElementById('forgot-password-modal');
+        const closeModals = document.querySelectorAll('.close');
+        const tabs = document.querySelectorAll('.tab');
+        const saveCourseBtn = document.getElementById('save-course-btn');
+        const confirmPurchaseBtn = document.getElementById('confirm-purchase-btn');
+        const resetPasswordBtn = document.getElementById('reset-password-btn');
+        const coursesContainer = document.getElementById('courses-container');
+        const coursesTableBody = document.getElementById('courses-table-body');
+        const categoriesTableBody = document.getElementById('categories-table-body');
+        const usersTableBody = document.getElementById('users-table-body');
+        const salesTableBody = document.getElementById('sales-table-body');
+        const myCoursesContainer = document.getElementById('my-courses-container');
+        const purchaseHistoryBody = document.getElementById('purchase-history-body');
+        const updateProfileBtn = document.getElementById('update-profile');
+        const forgotPasswordLink = document.getElementById('forgot-password-link');
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+        
+        // Current user
+        let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
+        let currentCourseToPurchase = null;
+        let currentLanguage = 'hi';
+        
+        // Initialize the app
+        function initApp() {
+            // Check if user is logged in
+            if (currentUser) {
+                authButtons.style.display = 'none';
+                userMenu.style.display = 'flex';
+                
+                if (currentUser.role === 'student') {
+                    studentDashboard.style.display = 'block';
+                    loadStudentDashboard();
+                } else if (currentUser.role === 'teacher') {
+                    teacherDashboard.style.display = 'block';
+                    loadTeacherDashboard();
+                } else if (currentUser.role === 'owner') {
+                    ownerDashboard.style.display = 'block';
+                    loadOwnerDashboard();
+                }
+                
+                document.getElementById('home').style.display = 'none';
+            } else {
+                authButtons.style.display = 'flex';
+                userMenu.style.display = 'none';
+                studentDashboard.style.display = 'none';
+                teacherDashboard.style.display = 'none';
+                ownerDashboard.style.display = 'none';
+                document.getElementById('home').style.display = 'block';
+            }
+            
+            // Load courses for student view
+            loadCourses();
+            
+            // Set up payment method toggle
+            paymentMethods.forEach(method => {
+                method.addEventListener('change', function() {
+                    document.querySelectorAll('.payment-method').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                    document.getElementById(`${this.value}-payment`).style.display = 'block';
+                });
+            });
+        }
+        
+        // Load courses for student view
+        function loadCourses() {
+            const courses = JSON.parse(localStorage.getItem('courses')) || [];
+            
+            coursesContainer.innerHTML = '';
+            
+            courses.forEach(course => {
+                const courseCard = document.createElement('div');
+                courseCard.className = 'course-card';
+                courseCard.innerHTML = `
+                    <div class="course-img">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>${course.name}</h3>
+                        <p>${course.description}</p>
+                        <p class="price">₹${course.price}</p>
+                        <p>श्रेणी: ${course.category}</p>
+                        <button class="btn btn-primary" style="width: 100%;" data-course-id="${course.id}">कोर्स खरीदें</button>
+                    </div>
+                `;
+                
+                coursesContainer.appendChild(courseCard);
+            });
+            
+            // Add event listeners to purchase buttons
+            document.querySelectorAll('[data-course-id]').forEach(button => {
+                button.addEventListener('click', function() {
+                    const courseId = parseInt(this.getAttribute('data-course-id'));
+                    openPurchaseModal(courseId);
+                });
+            });
+        }
+        
+        // Load student dashboard
+        function loadStudentDashboard() {
+            // Load purchased courses
+            const purchases = JSON.parse(localStorage.getItem('purchases')) || [];
+            const courses = JSON.parse(localStorage.getItem('courses')) || [];
+            const userPurchases = purchases.filter(p => p.userId === currentUser.id);
+            
+            myCoursesContainer.innerHTML = '';
+            
+            userPurchases.forEach(purchase => {
+                const course = courses.find(c => c.id === purchase.courseId);
+                if (course) {
+                    const courseCard = document.createElement('div');
+                    courseCard.className = 'course-card';
+                    courseCard.innerHTML = `
+                        <div class="course-img">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3>${course.name}</h3>
+                            <p>${course.description}</p>
+                            <p class="price">खरीदा गया: ₹${course.price}</p>
+                            <p>श्रेणी: ${course.category}</p>
+                            <button class="btn btn-primary" style="width: 100%;">कोर्स एक्सेस करें</button>
+                        </div>
+                    `;
+                    
+                    myCoursesContainer.appendChild(courseCard);
+                }
+            });
+            
+            // Load purchase history
+            purchaseHistoryBody.innerHTML = '';
+            
+            userPurchases.forEach(purchase => {
+                const course = courses.find(c => c.id === purchase.courseId);
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${course ? course.name : 'N/A'}</td>
+                    <td>${new Date(purchase.date).toLocaleDateString('hi-IN')}</td>
+                    <td>₹${purchase.amount}</td>
+                    <td>पूर्ण</td>
+                `;
+                
+                purchaseHistoryBody.appendChild(row);
+            });
+            
+            // Load profile data
+            document.getElementById('profile-name').value = currentUser.name;
+            document.getElementById('profile-email').value = currentUser.email;
+        }
+        
+        // Load teacher dashboard
+        function loadTeacherDashboard() {
+            const courses = JSON.parse(localStorage.getItem('courses')) || [];
+            const teacherCourses = courses.filter(c => c.teacherId === currentUser.id);
+            
+            const teacherCoursesBody = document.getElementById('teacher-courses-body');
+            teacherCoursesBody.innerHTML = '';
+            
+            teacherCourses.forEach(course => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${course.name}</td>
+                    <td>${course.category}</td>
+                    <td>₹${course.price}</td>
+                    <td>15</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">संपादित</button>
+                        <button class="btn btn-danger btn-sm">हटाएं</button>
+                    </td>
+                `;
+                
+                teacherCoursesBody.appendChild(row);
+            });
+            
+            // Load profile data
+            document.getElementById('teacher-profile-name').value = currentUser.name;
+            document.getElementById('teacher-profile-email').value = currentUser.email;
+            document.getElementById('teacher-profile-bank').value = currentUser.bankDetails || '';
+            document.getElementById('teacher-profile-ifsc').value = currentUser.ifscCode || '';
+        }
+        
+        // Load owner dashboard
+        function loadOwnerDashboard() {
+            // Owner dashboard is pre-populated with static data
+        }
+        
+        // Open purchase modal
+        function openPurchaseModal(courseId) {
+            const courses = JSON.parse(localStorage.getItem('courses')) || [];
+            const course = courses.find(c => c.id === courseId);
+            
+            if (course) {
+                currentCourseToPurchase = course;
+                document.getElementById('purchase-course-title').textContent = `${course.name} खरीदें - ₹${course.price}`;
+                
+                // Update QR code with course price
+                const qrImg = document.querySelector('.qr-code img');
+                qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=UPI_ID:owner@tutorprakash&amp;amount=${course.price}`;
+                
+                purchaseCourseModal.style.display = 'flex';
+            }
+        }
+        
+        // Event Listeners
+        loginBtn.addEventListener('click', () => {
+            authSection.style.display = 'flex';
+            document.querySelector('[data-tab="login"]').click();
+            document.getElementById('home').style.display = 'none';
+        });
+        
+        signupBtn.addEventListener('click', () => {
+            authSection.style.display = 'flex';
+            document.querySelector('[data-tab="signup"]').click();
+            document.getElementById('home').style.display = 'none';
+        });
+        
+        startLearningBtn.addEventListener('click', () => {
+            authSection.style.display = 'flex';
+            document.querySelector('[data-tab="login"]').click();
+            document.getElementById('home').style.display = 'none';
+        });
+        
+        logoutBtn.addEventListener('click', () => {
+            // Clear user session
+            localStorage.removeItem('currentUser');
+            currentUser = null;
+            
+            // Reload the app
+            initApp();
+        });
+        
+        dashboardBtn.addEventListener('click', () => {
+            if (currentUser) {
+                if (currentUser.role === 'student') {
+                    studentDashboard.style.display = 'block';
+                    teacherDashboard.style.display = 'none';
+                    ownerDashboard.style.display = 'none';
+                } else if (currentUser.role === 'teacher') {
+                    teacherDashboard.style.display = 'block';
+                    studentDashboard.style.display = 'none';
+                    ownerDashboard.style.display = 'none';
+                } else if (currentUser.role === 'owner') {
+                    ownerDashboard.style.display = 'block';
+                    studentDashboard.style.display = 'none';
+                    teacherDashboard.style.display = 'none';
+                }
+                document.getElementById('home').style.display = 'none';
+                authSection.style.display = 'none';
+            }
+        });
+        
+        // Forgot password link
+        forgotPasswordLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            authSection.style.display = 'none';
+            forgotPasswordModal.style.display = 'flex';
+        });
+        
+        // Reset password button
+        resetPasswordBtn.addEventListener('click', () => {
+            const email = document.getElementById('reset-email').value;
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(u => u.email === email);
+            
+            if (user) {
+                alert('पासवर्ड रीसेट लिंक आपके ईमेल पर भेज दिया गया है!');
+                forgotPasswordModal.style.display = 'none';
+            } else {
+                alert('यह ईमेल पता रजिस्टर्ड नहीं है!');
+            }
+        });
+        
+        // Language switcher
+        languageButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                languageButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                currentLanguage = lang;
+                
+                // In a real app, you would load translations here
+                alert(`Language changed to ${lang === 'hi' ? 'Hindi' : 'English'}`);
+            });
+        });
+        
+        // Tab switching
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+                
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show corresponding content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                document.getElementById(`${tabName}-tab`).classList.add('active');
+            });
+        });
+        
+        // Login form submission
+        loginSubmit.addEventListener('click', () => {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const role = document.getElementById('login-role').value;
+            
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(u => u.email === email && u.password === password && u.role === role);
+            
+            if (user) {
+                // Save current user to localStorage
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                currentUser = user;
+                
+                // Reload the app
+                initApp();
+                
+                // Show success message
+                alert('लॉगिन सफल!');
+            } else {
+                alert('अमान्य क्रेडेंशियल्स! कृपया पुनः प्रयास करें।');
+            }
+        });
+        
+        // Signup form submission
+        signupSubmit.addEventListener('click', () => {
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const role = document.getElementById('signup-role').value;
+            
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            
+            // Check if user already exists
+            if (users.some(u => u.email === email)) {
+                alert('इस ईमेल के साथ उपयोगकर्ता पहले से मौजूद है!');
+                return;
+            }
+            
+            // Add new user
+            const newUser = { 
+                id: users.length > 0 ? Math.max(...users.map(u => u.id)) + 1 : 1,
+                name, 
+                email, 
+                password, 
+                role 
+            };
+            
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            alert('पंजीकरण सफल! कृपया लॉगिन करें।');
+            
+            // Switch to login form
+            document.querySelector('[data-tab="login"]').click();
+            document.getElementById('login-email').value = email;
+            document.getElementById('login-password').value = password;
+        });
+        
+        // Add course button
+        addCourseBtn.addEventListener('click', () => {
+            addCourseModal.style.display = 'flex';
+        });
+        
+        // Save course button
+        saveCourseBtn.addEventListener('click', () => {
+            const courseName = document.getElementById('course-name').value;
+            const courseCategory = document.getElementById('course-category').value;
+            const coursePrice = parseInt(document.getElementById('course-price').value);
+            const courseDescription = document.getElementById('course-description').value;
+            
+            if (courseName && courseCategory && coursePrice && courseDescription) {
+                const courses = JSON.parse(localStorage.getItem('courses')) || [];
+                const newCourse = {
+                    id: courses.length > 0 ? Math.max(...courses.map(c => c.id)) + 1 : 1,
+                    name: courseName,
+                    category: courseCategory,
+                    price: coursePrice,
+                    description: courseDescription,
+                    teacherId: currentUser.id
+                };
+                
+                courses.push(newCourse);
+                localStorage.setItem('courses', JSON.stringify(courses));
+                
+                // Reload courses
+                loadCourses();
+                
+                alert('कोर्स सफलतापूर्वक जोड़ा गया!');
+                addCourseModal.style.display = 'none';
+                
+                // Clear form
+                document.getElementById('course-name').value = '';
+                document.getElementById('course-category').value = '';
+                document.getElementById('course-price').value = '';
+                document.getElementById('course-description').value = '';
+            } else {
+                alert('कृपया सभी फ़ील्ड भरें!');
+            }
+        });
+        
+        // UPI Payment button
+        document.getElementById('pay-with-upi').addEventListener('click', () => {
+            if (currentCourseToPurchase && currentUser) {
+                processPayment('upi');
+            }
+        });
+        
+        // Verify payment button
+        document.getElementById('verify-payment').addEventListener('click', () => {
+            const transactionId = document.getElementById('transaction-id').value;
+            if (transactionId) {
+                processPayment('qr', transactionId);
+            } else {
+                alert('कृपया लेन-देन ID दर्ज करें!');
+            }
+        });
+        
+        // Process payment
+        function processPayment(method, transactionId = null) {
+            const purchases = JSON.parse(localStorage.getItem('purchases')) || [];
+            const newPurchase = {
+                id: purchases.length > 0 ? Math.max(...purchases.map(p => p.id)) + 1 : 1,
+                userId: currentUser.id,
+                courseId: currentCourseToPurchase.id,
+                amount: currentCourseToPurchase.price,
+                method: method,
+                transactionId: transactionId,
+                date: new Date().toISOString()
+            };
+            
+            purchases.push(newPurchase);
+            localStorage.setItem('purchases', JSON.stringify(purchases));
+            
+            // Show success message
+            const alertDiv = document.getElementById('purchase-alert');
+            alertDiv.innerHTML = `<div class="alert alert-success">भुगतान सफल! कोर्स अब आपके अकाउंट में है।</div>`;
+            
+            // Reload student dashboard
+            loadStudentDashboard();
+            
+            // Close modal after 2 seconds
+            setTimeout(() => {
+                purchaseCourseModal.style.display = 'none';
+                alertDiv.innerHTML = '';
+            }, 2000);
+        }
+        
+        // Update profile button
+        updateProfileBtn.addEventListener('click', () => {
+            const name = document.getElementById('profile-name').value;
+            const password = document.getElementById('profile-password').value;
+            
+            if (name) {
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                const userIndex = users.findIndex(u => u.id === currentUser.id);
+                
+                if (userIndex !== -1) {
+                    users[userIndex].name = name;
+                    
+                    if (password) {
+                        users[userIndex].password = password;
+                    }
+                    
+                    localStorage.setItem('users', JSON.stringify(users));
+                    
+                    // Update current user
+                    currentUser = users[userIndex];
+                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                    
+                    alert('प्रोफाइल सफलतापूर्वक अपडेट की गई!');
+                }
+            } else {
+                alert('कृपया नाम दर्ज करें!');
+            }
+        });
+        
+        // Close modals
+        closeModals.forEach(close => {
+            close.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+            });
+        });
+        
+        // Close modals when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+            }
+        });
+        
+        // Dashboard navigation
+        document.querySelectorAll('.dashboard-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = this.getAttribute('data-target');
+                
+                // Update active link
+                document.querySelectorAll('.dashboard-link').forEach(l => {
+                    l.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Show corresponding content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                document.getElementById(target).classList.add('active');
+            });
+        });
+        
+        // Teacher navigation
+        document.querySelectorAll('.teacher-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = this.getAttribute('data-target');
+                
+                // Update active link
+                document.querySelectorAll('.teacher-link').forEach(l => {
+                    l.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Show corresponding content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                document.getElementById(target).classList.add('active');
+            });
+        });
+        
+        // Owner navigation
+        document.querySelectorAll('.owner-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = this.getAttribute('data-target');
+                
+                // Update active link
+                document.querySelectorAll('.owner-link').forEach(l => {
+                    l.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Show corresponding content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                document.getElementById(target).classList.add('active');
+            });
+        });
+        
+        // Initialize the app
+        initApp();
+    </script>
+</body>
+</html>
