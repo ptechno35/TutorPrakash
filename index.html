@@ -638,14 +638,14 @@
             <div class="header-content">
                 <div class="logo">
                     <i class="fas fa-graduation-cap">🎓</i>
-                    <h1>TUTOR PRAKASH</h1>
+                    <h1 data-lang-key="app-title">TUTOR PRAKASH</h1>
                 </div>
                 <nav id="main-nav">
                     <ul>
-                        <li><a href="#" class="nav-link" data-target="home">होम</a></li>
-                        <li><a href="#" class="nav-link" data-target="courses">कोर्सेज</a></li>
-                        <li><a href="#" class="nav-link" data-target="about">हमारे बारे में</a></li>
-                        <li><a href="#" class="nav-link" data-target="contact">संपर्क</a></li>
+                        <li><a href="#" class="nav-link" data-target="home" data-lang-key="nav-home">होम</a></li>
+                        <li><a href="#" class="nav-link" data-target="courses" data-lang-key="nav-courses">कोर्सेज</a></li>
+                        <li><a href="#" class="nav-link" data-target="about" data-lang-key="nav-about">हमारे बारे में</a></li>
+                        <li><a href="#" class="nav-link" data-target="contact" data-lang-key="nav-contact">संपर्क</a></li>
                     </ul>
                 </nav>
                 <div class="language-switcher">
@@ -654,12 +654,12 @@
                     <button class="language-btn" data-lang="en">English</button>
                 </div>
                 <div class="auth-buttons" id="auth-buttons">
-                    <button class="btn btn-outline" id="login-btn">लॉग इन</button>
-                    <button class="btn btn-primary" id="signup-btn">रजिस्टर</button>
+                    <button class="btn btn-outline" id="login-btn" data-lang-key="login-btn">लॉग इन</button>
+                    <button class="btn btn-primary" id="signup-btn" data-lang-key="signup-btn">रजिस्टर</button>
                 </div>
                 <div id="user-menu" style="display: none;">
-                    <button class="btn btn-success" id="dashboard-btn">डैशबोर्ड</button>
-                    <button class="btn btn-outline" id="logout-btn">लॉग आउट</button>
+                    <button class="btn btn-success" id="dashboard-btn" data-lang-key="dashboard-btn">डैशबोर्ड</button>
+                    <button class="btn btn-outline" id="logout-btn" data-lang-key="logout-btn">लॉग आउट</button>
                 </div>
             </div>
         </div>
@@ -670,14 +670,14 @@
         <section id="home" class="section active">
             <div class="hero">
                 <div class="hero-content">
-                    <h2>शिक्षा का <span>बेहतरीन प्लेटफ़ॉर्म</span> आपके दरवाजे पर</h2>
-                    <p>TUTOR PRAKASH एक रिवोल्यूशनरी टीचिंग ऐप है जो छात्रों को एक्सपर्ट एजुकेटर्स से जोड़ता है। हजारों कोर्सेज, इंटरएक्टिव लेसन्स और लर्निंग रिसोर्सेज तक पहुंचें।</p>
-                    <button class="btn btn-primary" id="start-learning-btn">अभी सीखना शुरू करें</button>
+                    <h2 data-lang-key="hero-title">शिक्षा का <span>बेहतरीन प्लेटफ़ॉर्म</span> आपके दरवाजे पर</h2>
+                    <p data-lang-key="hero-desc">TUTOR PRAKASH एक रिवोल्यूशनरी टीचिंग ऐप है जो छात्रों को एक्सपर्ट एजुकेटर्स से जोड़ता है। हजारों कोर्सेज, इंटरएक्टिव लेसन्स और लर्निंग रिसोर्सेज तक पहुंचें।</p>
+                    <button class="btn btn-primary" id="start-learning-btn" data-lang-key="start-learning-btn">अभी सीखना शुरू करें</button>
                 </div>
                 <div class="hero-image">
                     <div class="hero-image-content">
                         <i class="fas fa-chalkboard-teacher">👨‍🏫</i>
-                        <h3>जानें, बढ़ें, सफल होें</h3>
+                        <h3 data-lang-key="hero-tagline">जानें, बढ़ें, सफल होें</h3>
                     </div>
                 </div>
             </div>
@@ -687,59 +687,59 @@
         <section id="auth-section" class="section">
             <div class="auth-container">
                 <div class="tabs">
-                    <div class="tab active" data-tab="login">लॉग इन</div>
-                    <div class="tab" data-tab="signup">रजिस्टर</div>
+                    <div class="tab active" data-tab="login" data-lang-key="login-tab">लॉग इन</div>
+                    <div class="tab" data-tab="signup" data-lang-key="signup-tab">रजिस्टर</div>
                 </div>
                 
                 <div class="tab-content active" id="login-tab">
                     <div class="auth-form">
-                        <h2>अपने अकाउंट में लॉग इन करें</h2>
+                        <h2 data-lang-key="login-title">अपने अकाउंट में लॉग इन करें</h2>
                         <div class="form-group">
-                            <label for="login-email">ईमेल</label>
-                            <input type="email" id="login-email" placeholder="अपना ईमेल दर्ज करें">
+                            <label for="login-email" data-lang-key="email-label">ईमेल</label>
+                            <input type="email" id="login-email" data-lang-key="email-placeholder" placeholder="अपना ईमेल दर्ज करें">
                         </div>
                         <div class="form-group">
-                            <label for="login-password">पासवर्ड</label>
-                            <input type="password" id="login-password" placeholder="अपना पासवर्ड दर्ज करें">
+                            <label for="login-password" data-lang-key="password-label">पासवर्ड</label>
+                            <input type="password" id="login-password" data-lang-key="password-placeholder" placeholder="अपना पासवर्ड दर्ज करें">
                         </div>
                         <div class="forgot-password">
-                            <a href="#" id="forgot-password-link">पासवर्ड भूल गए?</a>
+                            <a href="#" id="forgot-password-link" data-lang-key="forgot-password">पासवर्ड भूल गए?</a>
                         </div>
                         <div class="form-group">
-                            <label for="login-role">लॉग इन टाइप चुनें</label>
+                            <label for="login-role" data-lang-key="login-type-label">लॉग इन टाइप चुनें</label>
                             <select id="login-role">
-                                <option value="student">छात्र</option>
-                                <option value="teacher">शिक्षक</option>
-                                <option value="owner">मालिक</option>
+                                <option value="student" data-lang-key="student-option">छात्र</option>
+                                <option value="teacher" data-lang-key="teacher-option">शिक्षक</option>
+                                <option value="owner" data-lang-key="owner-option">मालिक</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary" style="width: 100%;" id="login-submit">लॉग इन</button>
+                        <button class="btn btn-primary" style="width: 100%;" id="login-submit" data-lang-key="login-submit">लॉग इन</button>
                     </div>
                 </div>
                 
                 <div class="tab-content" id="signup-tab">
                     <div class="auth-form">
-                        <h2>नया अकाउंट बनाएं</h2>
+                        <h2 data-lang-key="signup-title">नया अकाउंट बनाएं</h2>
                         <div class="form-group">
-                            <label for="signup-name">पूरा नाम</label>
-                            <input type="text" id="signup-name" placeholder="अपना पूरा नाम दर्ज करें">
+                            <label for="signup-name" data-lang-key="name-label">पूरा नाम</label>
+                            <input type="text" id="signup-name" data-lang-key="name-placeholder" placeholder="अपना पूरा नाम दर्ज करें">
                         </div>
                         <div class="form-group">
-                            <label for="signup-email">ईमेल</label>
-                            <input type="email" id="signup-email" placeholder="अपना ईमेल दर्ज करें">
+                            <label for="signup-email" data-lang-key="email-label">ईमेल</label>
+                            <input type="email" id="signup-email" data-lang-key="email-placeholder" placeholder="अपना ईमेल दर्ज करें">
                         </div>
                         <div class="form-group">
-                            <label for="signup-password">पासवर्ड</label>
-                            <input type="password" id="signup-password" placeholder="अपना पासवर्ड बनाएं">
+                            <label for="signup-password" data-lang-key="password-label">पासवर्ड</label>
+                            <input type="password" id="signup-password" data-lang-key="password-create-placeholder" placeholder="अपना पासवर्ड बनाएं">
                         </div>
                         <div class="form-group">
-                            <label for="signup-role">अकाउंट टाइप चुनें</label>
+                            <label for="signup-role" data-lang-key="account-type-label">अकाउंट टाइप चुनें</label>
                             <select id="signup-role">
-                                <option value="student">छात्र</option>
-                                <option value="teacher">शिक्षक</option>
+                                <option value="student" data-lang-key="student-option">छात्र</option>
+                                <option value="teacher" data-lang-key="teacher-option">शिक्षक</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary" style="width: 100%;" id="signup-submit">अकाउंट बनाएं</button>
+                        <button class="btn btn-primary" style="width: 100%;" id="signup-submit" data-lang-key="signup-submit">अकाउंट बनाएं</button>
                     </div>
                 </div>
             </div>
@@ -747,40 +747,40 @@
 
         <!-- Student Dashboard -->
         <section id="student-dashboard" class="section">
-            <h2 style="margin-bottom: 20px;">छात्र डैशबोर्ड</h2>
+            <h2 style="margin-bottom: 20px;" data-lang-key="student-dashboard-title">छात्र डैशबोर्ड</h2>
             <div class="dashboard">
                 <div class="sidebar">
-                    <h3>मेन्यू</h3>
+                    <h3 data-lang-key="menu-title">मेन्यू</h3>
                     <ul>
-                        <li><a href="#" class="dashboard-link active" data-target="available-courses">उपलब्ध कोर्सेज</a></li>
-                        <li><a href="#" class="dashboard-link" data-target="my-courses">मेरे कोर्सेज</a></li>
-                        <li><a href="#" class="dashboard-link" data-target="purchase-history">खरीदी का इतिहास</a></li>
-                        <li><a href="#" class="dashboard-link" data-target="profile">प्रोफाइल</a></li>
+                        <li><a href="#" class="dashboard-link active" data-target="available-courses" data-lang-key="available-courses">उपलब्ध कोर्सेज</a></li>
+                        <li><a href="#" class="dashboard-link" data-target="my-courses" data-lang-key="my-courses">मेरे कोर्सेज</a></li>
+                        <li><a href="#" class="dashboard-link" data-target="purchase-history" data-lang-key="purchase-history">खरीदी का इतिहास</a></li>
+                        <li><a href="#" class="dashboard-link" data-target="profile" data-lang-key="profile">प्रोफाइल</a></li>
                     </ul>
                 </div>
                 <div class="main-content">
                     <div id="dashboard-content">
                         <div id="available-courses" class="tab-content active">
-                            <h3>उपलब्ध कोर्सेज</h3>
+                            <h3 data-lang-key="available-courses">उपलब्ध कोर्सेज</h3>
                             <div class="courses-grid" id="courses-container">
                                 <!-- Courses will be loaded dynamically -->
                             </div>
                         </div>
                         <div id="my-courses" class="tab-content">
-                            <h3>मेरे खरीदे हुए कोर्सेज</h3>
+                            <h3 data-lang-key="my-courses">मेरे खरीदे हुए कोर्सेज</h3>
                             <div class="courses-grid" id="my-courses-container">
                                 <!-- Purchased courses will be loaded dynamically -->
                             </div>
                         </div>
                         <div id="purchase-history" class="tab-content">
-                            <h3>खरीदी का इतिहास</h3>
+                            <h3 data-lang-key="purchase-history">खरीदी का इतिहास</h3>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>कोर्स नाम</th>
-                                        <th>तारीख</th>
-                                        <th>कीमत</th>
-                                        <th>स्थिति</th>
+                                        <th data-lang-key="course-name">कोर्स नाम</th>
+                                        <th data-lang-key="date">तारीख</th>
+                                        <th data-lang-key="price">कीमत</th>
+                                        <th data-lang-key="status">स्थिति</th>
                                     </tr>
                                 </thead>
                                 <tbody id="purchase-history-body">
@@ -789,20 +789,20 @@
                             </table>
                         </div>
                         <div id="profile" class="tab-content">
-                            <h3>प्रोफाइल</h3>
+                            <h3 data-lang-key="profile">प्रोफाइल</h3>
                             <div class="form-group">
-                                <label for="profile-name">नाम</label>
-                                <input type="text" id="profile-name" placeholder="अपना नाम दर्ज करें">
+                                <label for="profile-name" data-lang-key="name-label">नाम</label>
+                                <input type="text" id="profile-name" data-lang-key="name-placeholder" placeholder="अपना नाम दर्ज करें">
                             </div>
                             <div class="form-group">
-                                <label for="profile-email">ईमेल</label>
+                                <label for="profile-email" data-lang-key="email-label">ईमेल</label>
                                 <input type="email" id="profile-email" placeholder="अपना ईमेल दर्ज करें" disabled>
                             </div>
                             <div class="form-group">
-                                <label for="profile-password">नया पासवर्ड (बदलने के लिए)</label>
-                                <input type="password" id="profile-password" placeholder="नया पासवर्ड दर्ज करें">
+                                <label for="profile-password" data-lang-key="new-password-label">नया पासवर्ड (बदलने के लिए)</label>
+                                <input type="password" id="profile-password" data-lang-key="new-password-placeholder" placeholder="नया पासवर्ड दर्ज करें">
                             </div>
-                            <button class="btn btn-primary" id="update-profile">अपडेट प्रोफाइल</button>
+                            <button class="btn btn-primary" id="update-profile" data-lang-key="update-profile-btn">अपडेट प्रोफाइल</button>
                         </div>
                     </div>
                 </div>
@@ -811,30 +811,30 @@
 
         <!-- Teacher Dashboard -->
         <section id="teacher-dashboard" class="section">
-            <h2 style="margin-bottom: 20px;">शिक्षक डैशबोर्ड</h2>
+            <h2 style="margin-bottom: 20px;" data-lang-key="teacher-dashboard-title">शिक्षक डैशबोर्ड</h2>
             <div class="dashboard">
                 <div class="sidebar">
-                    <h3>मेन्यू</h3>
+                    <h3 data-lang-key="menu-title">मेन्यू</h3>
                     <ul>
-                        <li><a href="#" class="teacher-link active" data-target="teacher-courses">मेरे कोर्सेज</a></li>
-                        <li><a href="#" class="teacher-link" data-target="add-course">नया कोर्स जोड़ें</a></li>
-                        <li><a href="#" class="teacher-link" data-target="teacher-earnings">आय विवरण</a></li>
-                        <li><a href="#" class="teacher-link" data-target="teacher-profile">प्रोफाइल</a></li>
+                        <li><a href="#" class="teacher-link active" data-target="teacher-courses" data-lang-key="my-courses">मेरे कोर्सेज</a></li>
+                        <li><a href="#" class="teacher-link" data-target="add-course" data-lang-key="add-course">नया कोर्स जोड़ें</a></li>
+                        <li><a href="#" class="teacher-link" data-target="teacher-earnings" data-lang-key="earnings">आय विवरण</a></li>
+                        <li><a href="#" class="teacher-link" data-target="teacher-profile" data-lang-key="profile">प्रोफाइल</a></li>
                     </ul>
                 </div>
                 <div class="main-content">
                     <div id="teacher-content">
                         <div id="teacher-courses" class="tab-content active">
-                            <h3>मेरे कोर्सेज</h3>
-                            <button class="btn btn-primary" id="teacher-add-course-btn">नया कोर्स जोड़ें</button>
+                            <h3 data-lang-key="my-courses">मेरे कोर्सेज</h3>
+                            <button class="btn btn-primary" id="teacher-add-course-btn" data-lang-key="add-course-btn">नया कोर्स जोड़ें</button>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>कोर्स नाम</th>
-                                        <th>श्रेणी</th>
-                                        <th>कीमत</th>
-                                        <th>बिक्री</th>
-                                        <th>क्रियाएं</th>
+                                        <th data-lang-key="course-name">कोर्स नाम</th>
+                                        <th data-lang-key="category">श्रेणी</th>
+                                        <th data-lang-key="price">कीमत</th>
+                                        <th data-lang-key="sales">बिक्री</th>
+                                        <th data-lang-key="actions">क्रियाएं</th>
                                     </tr>
                                 </thead>
                                 <tbody id="teacher-courses-body">
@@ -843,57 +843,57 @@
                             </table>
                         </div>
                         <div id="add-course" class="tab-content">
-                            <h3>नया कोर्स जोड़ें</h3>
+                            <h3 data-lang-key="add-course">नया कोर्स जोड़ें</h3>
                             <div class="form-group">
-                                <label for="teacher-course-name">कोर्स नाम</label>
-                                <input type="text" id="teacher-course-name" placeholder="कोर्स का नाम दर्ज करें">
+                                <label for="teacher-course-name" data-lang-key="course-name-label">कोर्स नाम</label>
+                                <input type="text" id="teacher-course-name" data-lang-key="course-name-placeholder" placeholder="कोर्स का नाम दर्ज करें">
                             </div>
                             <div class="form-group">
-                                <label for="teacher-course-category">श्रेणी</label>
-                                <input type="text" id="teacher-course-category" placeholder="कोर्स की श्रेणी दर्ज करें">
+                                <label for="teacher-course-category" data-lang-key="category-label">श्रेणी</label>
+                                <input type="text" id="teacher-course-category" data-lang-key="category-placeholder" placeholder="कोर्स की श्रेणी दर्ज करें">
                             </div>
                             <div class="form-group">
-                                <label for="teacher-course-price">कीमत (₹)</label>
-                                <input type="number" id="teacher-course-price" placeholder="कोर्स की कीमत दर्ज करें">
+                                <label for="teacher-course-price" data-lang-key="price-label">कीमत (₹)</label>
+                                <input type="number" id="teacher-course-price" data-lang-key="price-placeholder" placeholder="कोर्स की कीमत दर्ज करें">
                             </div>
                             <div class="form-group">
-                                <label for="teacher-course-description">विवरण</label>
-                                <textarea id="teacher-course-description" placeholder="कोर्स का विवरण दर्ज करें" rows="3"></textarea>
+                                <label for="teacher-course-description" data-lang-key="description-label">विवरण</label>
+                                <textarea id="teacher-course-description" data-lang-key="description-placeholder" placeholder="कोर्स का विवरण दर्ज करें" rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="course-materials">कोर्स सामग्री जोड़ें</label>
+                                <label for="course-materials" data-lang-key="add-materials-label">कोर्स सामग्री जोड़ें</label>
                                 <div class="materials-list">
                                     <div class="material-item">
                                         <i class="fas fa-file-pdf">📄</i>
-                                        <span>PDF नोट्स</span>
+                                        <span data-lang-key="pdf-notes">PDF नोट्स</span>
                                         <input type="file" accept=".pdf" style="margin-left: auto;">
                                     </div>
                                     <div class="material-item">
                                         <i class="fab fa-youtube">📺</i>
-                                        <span>YouTube लिंक</span>
-                                        <input type="text" placeholder="YouTube वीडियो लिंक" style="margin-left: auto; width: 200px;">
+                                        <span data-lang-key="youtube-link">YouTube लिंक</span>
+                                        <input type="text" data-lang-key="youtube-placeholder" placeholder="YouTube वीडियो लिंक" style="margin-left: auto; width: 200px;">
                                     </div>
                                     <div class="material-item">
                                         <i class="fas fa-video">🎥</i>
-                                        <span>Zoom लिंक</span>
-                                        <input type="text" placeholder="Zoom मीटिंग लिंक" style="margin-left: auto; width: 200px;">
+                                        <span data-lang-key="zoom-link">Zoom लिंक</span>
+                                        <input type="text" data-lang-key="zoom-placeholder" placeholder="Zoom मीटिंग लिंक" style="margin-left: auto; width: 200px;">
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary" id="teacher-save-course-btn">कोर्स सहेजें</button>
+                            <button class="btn btn-primary" id="teacher-save-course-btn" data-lang-key="save-course-btn">कोर्स सहेजें</button>
                         </div>
                         <div id="teacher-earnings" class="tab-content">
-                            <h3>आय विवरण</h3>
+                            <h3 data-lang-key="earnings">आय विवरण</h3>
                             <div class="alert alert-info">
-                                <strong>कुल आय: ₹12,500</strong> (20% प्लेटफ़ॉर्म शुल्क घटाकर)
+                                <strong data-lang-key="total-earnings">कुल आय: ₹12,500</strong> <span data-lang-key="platform-fee-note">(20% प्लेटफ़ॉर्म शुल्क घटाकर)</span>
                             </div>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>कोर्स नाम</th>
-                                        <th>बिक्री</th>
-                                        <th>कमाई</th>
-                                        <th>तारीख</th>
+                                        <th data-lang-key="course-name">कोर्स नाम</th>
+                                        <th data-lang-key="sales">बिक्री</th>
+                                        <th data-lang-key="earnings">कमाई</th>
+                                        <th data-lang-key="date">तारीख</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -919,28 +919,28 @@
                             </table>
                         </div>
                         <div id="teacher-profile" class="tab-content">
-                            <h3>प्रोफाइल</h3>
+                            <h3 data-lang-key="profile">प्रोफाइल</h3>
                             <div class="form-group">
-                                <label for="teacher-profile-name">नाम</label>
-                                <input type="text" id="teacher-profile-name" placeholder="अपना नाम दर्ज करें">
+                                <label for="teacher-profile-name" data-lang-key="name-label">नाम</label>
+                                <input type="text" id="teacher-profile-name" data-lang-key="name-placeholder" placeholder="अपना नाम दर्ज करें">
                             </div>
                             <div class="form-group">
-                                <label for="teacher-profile-email">ईमेल</label>
+                                <label for="teacher-profile-email" data-lang-key="email-label">ईमेल</label>
                                 <input type="email" id="teacher-profile-email" placeholder="अपना ईमेल दर्ज करें" disabled>
                             </div>
                             <div class="form-group">
-                                <label for="teacher-profile-bank">बैंक खाता विवरण</label>
-                                <input type="text" id="teacher-profile-bank" placeholder="बैंक खाता संख्या">
+                                <label for="teacher-profile-bank" data-lang-key="bank-details-label">बैंक खाता विवरण</label>
+                                <input type="text" id="teacher-profile-bank" data-lang-key="bank-account-placeholder" placeholder="बैंक खाता संख्या">
                             </div>
                             <div class="form-group">
-                                <label for="teacher-profile-ifsc">IFSC कोड</label>
-                                <input type="text" id="teacher-profile-ifsc" placeholder="IFSC कोड">
+                                <label for="teacher-profile-ifsc" data-lang-key="ifsc-label">IFSC कोड</label>
+                                <input type="text" id="teacher-profile-ifsc" data-lang-key="ifsc-placeholder" placeholder="IFSC कोड">
                             </div>
                             <div class="form-group">
-                                <label for="teacher-profile-password">नया पासवर्ड (बदलने के लिए)</label>
-                                <input type="password" id="teacher-profile-password" placeholder="नया पासवर्ड दर्ज करें">
+                                <label for="teacher-profile-password" data-lang-key="new-password-label">नया पासवर्ड (बदलने के लिए)</label>
+                                <input type="password" id="teacher-profile-password" data-lang-key="new-password-placeholder" placeholder="नया पासवर्ड दर्ज करें">
                             </div>
-                            <button class="btn btn-primary" id="update-teacher-profile">अपडेट प्रोफाइल</button>
+                            <button class="btn btn-primary" id="update-teacher-profile" data-lang-key="update-profile-btn">अपडेट प्रोफाइल</button>
                         </div>
                     </div>
                 </div>
@@ -949,29 +949,29 @@
 
         <!-- Owner Dashboard -->
         <section id="owner-dashboard" class="section">
-            <h2 style="margin-bottom: 20px;">मालिक डैशबोर्ड</h2>
+            <h2 style="margin-bottom: 20px;" data-lang-key="owner-dashboard-title">मालिक डैशबोर्ड</h2>
             <div class="dashboard">
                 <div class="sidebar">
-                    <h3>मेन्यू</h3>
+                    <h3 data-lang-key="menu-title">मेन्यू</h3>
                     <ul>
-                        <li><a href="#" class="owner-link active" data-target="owner-students">छात्र</a></li>
-                        <li><a href="#" class="owner-link" data-target="owner-teachers">शिक्षक</a></li>
-                        <li><a href="#" class="owner-link" data-target="owner-transactions">लेन-देन</a></li>
-                        <li><a href="#" class="owner-link" data-target="owner-courses">कोर्सेज</a></li>
+                        <li><a href="#" class="owner-link active" data-target="owner-students" data-lang-key="students">छात्र</a></li>
+                        <li><a href="#" class="owner-link" data-target="owner-teachers" data-lang-key="teachers">शिक्षक</a></li>
+                        <li><a href="#" class="owner-link" data-target="owner-transactions" data-lang-key="transactions">लेन-देन</a></li>
+                        <li><a href="#" class="owner-link" data-target="owner-courses" data-lang-key="courses">कोर्सेज</a></li>
                     </ul>
                 </div>
                 <div class="main-content">
                     <div id="owner-content">
                         <div id="owner-students" class="tab-content active">
-                            <h3>छात्र प्रबंधन</h3>
+                            <h3 data-lang-key="student-management">छात्र प्रबंधन</h3>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>नाम</th>
-                                        <th>ईमेल</th>
-                                        <th>पंजीकरण तिथि</th>
-                                        <th>स्थिति</th>
-                                        <th>क्रियाएं</th>
+                                        <th data-lang-key="name">नाम</th>
+                                        <th data-lang-key="email">ईमेल</th>
+                                        <th data-lang-key="registration-date">पंजीकरण तिथि</th>
+                                        <th data-lang-key="status">स्थिति</th>
+                                        <th data-lang-key="actions">क्रियाएं</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -979,42 +979,42 @@
                                         <td>राहुल शर्मा</td>
                                         <td>rahul@example.com</td>
                                         <td>10/08/2023</td>
-                                        <td><span class="status-badge status-active">सक्रिय</span></td>
+                                        <td><span class="status-badge status-active" data-lang-key="active">सक्रिय</span></td>
                                         <td>
-                                            <button class="btn btn-danger btn-sm">अक्षम करें</button>
+                                            <button class="btn btn-danger btn-sm" data-lang-key="disable-btn">अक्षम करें</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>प्रिया पाटिल</td>
                                         <td>priya@example.com</td>
                                         <td>15/08/2023</td>
-                                        <td><span class="status-badge status-active">सक्रिय</span></td>
+                                        <td><span class="status-badge status-active" data-lang-key="active">सक्रिय</span></td>
                                         <td>
-                                            <button class="btn btn-danger btn-sm">अक्षम करें</button>
+                                            <button class="btn btn-danger btn-sm" data-lang-key="disable-btn">अक्षम करें</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>अमित वर्मा</td>
                                         <td>amit@example.com</td>
                                         <td>20/08/2023</td>
-                                        <td><span class="status-badge status-inactive">निष्क्रिय</span></td>
+                                        <td><span class="status-badge status-inactive" data-lang-key="inactive">निष्क्रिय</span></td>
                                         <td>
-                                            <button class="btn btn-success btn-sm">सक्षम करें</button>
+                                            <button class="btn btn-success btn-sm" data-lang-key="enable-btn">सक्षम करें</button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div id="owner-teachers" class="tab-content">
-                            <h3>शिक्षक प्रबंधन</h3>
+                            <h3 data-lang-key="teacher-management">शिक्षक प्रबंधन</h3>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>नाम</th>
-                                        <th>ईमेल</th>
-                                        <th>विशेषज्ञता</th>
-                                        <th>स्थिति</th>
-                                        <th>क्रियाएं</th>
+                                        <th data-lang-key="name">नाम</th>
+                                        <th data-lang-key="email">ईमेल</th>
+                                        <th data-lang-key="expertise">विशेषज्ञता</th>
+                                        <th data-lang-key="status">स्थिति</th>
+                                        <th data-lang-key="actions">क्रियाएं</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1022,43 +1022,43 @@
                                         <td>डॉ. राजेश कुमार</td>
                                         <td>rajesh@example.com</td>
                                         <td>गणित</td>
-                                        <td><span class="status-badge status-active">सक्रिय</span></td>
+                                        <td><span class="status-badge status-active" data-lang-key="active">सक्रिय</span></td>
                                         <td>
-                                            <button class="btn btn-danger btn-sm">अक्षम करें</button>
+                                            <button class="btn btn-danger btn-sm" data-lang-key="disable-btn">अक्षम करें</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>प्रो. सीमा सिंह</td>
                                         <td>seema@example.com</td>
                                         <td>विज्ञान</td>
-                                        <td><span class="status-badge status-active">सक्रिय</span></td>
+                                        <td><span class="status-badge status-active" data-lang-key="active">सक्रिय</span></td>
                                         <td>
-                                            <button class="btn btn-danger btn-sm">अक्षम करें</button>
+                                            <button class="btn btn-danger btn-sm" data-lang-key="disable-btn">अक्षम करें</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>अनिल शर्मा</td>
                                         <td>anil@example.com</td>
-                                        <td>प्रोग्रामिंング</td>
-                                        <td><span class="status-badge status-inactive">निष्क्रिय</span></td>
+                                        <td>प्रोग्रामिंग</td>
+                                        <td><span class="status-badge status-inactive" data-lang-key="inactive">निष्क्रिय</span></td>
                                         <td>
-                                            <button class="btn btn-success btn-sm">सक्षम करें</button>
+                                            <button class="btn btn-success btn-sm" data-lang-key="enable-btn">सक्षम करें</button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div id="owner-transactions" class="tab-content">
-                            <h3>लेन-देन इतिहास</h3>
+                            <h3 data-lang-key="transaction-history">लेन-देन इतिहास</h3>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>लेन-देन ID</th>
-                                        <th>छात्र</th>
-                                        <th>कोर्स</th>
-                                        <th>शिक्षक</th>
-                                        <th>राशि</th>
-                                        <th>तारीख</th>
+                                        <th data-lang-key="transaction-id">लेन-देन ID</th>
+                                        <th data-lang-key="student">छात्र</th>
+                                        <th data-lang-key="course">कोर्स</th>
+                                        <th data-lang-key="teacher">शिक्षक</th>
+                                        <th data-lang-key="amount">राशि</th>
+                                        <th data-lang-key="date">तारीख</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1090,15 +1090,15 @@
                             </table>
                         </div>
                         <div id="owner-courses" class="tab-content">
-                            <h3>सभी कोर्सेज</h3>
+                            <h3 data-lang-key="all-courses">सभी कोर्सेज</h3>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>कोर्स नाम</th>
-                                        <th>शिक्षक</th>
-                                        <th>श्रेणी</th>
-                                        <th>कीमत</th>
-                                        <th>बिक्री</th>
+                                        <th data-lang-key="course-name">कोर्स नाम</th>
+                                        <th data-lang-key="teacher">शिक्षक</th>
+                                        <th data-lang-key="category">श्रेणी</th>
+                                        <th data-lang-key="price">कीमत</th>
+                                        <th data-lang-key="sales">बिक्री</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1136,26 +1136,26 @@
     <div class="modal" id="add-course-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>नया कोर्स जोड़ें</h3>
+                <h3 data-lang-key="add-course-modal-title">नया कोर्स जोड़ें</h3>
                 <span class="close">&times;</span>
             </div>
             <div class="form-group">
-                <label for="course-name">कोर्स नाम</label>
-                <input type="text" id="course-name" placeholder="कोर्स का नाम दर्ज करें">
+                <label for="course-name" data-lang-key="course-name-label">कोर्स नाम</label>
+                <input type="text" id="course-name" data-lang-key="course-name-placeholder" placeholder="कोर्स का नाम दर्ज करें">
             </div>
             <div class="form-group">
-                <label for="course-category">श्रेणी</label>
-                <input type="text" id="course-category" placeholder="कोर्स की श्रेणी दर्ज करें">
+                <label for="course-category" data-lang-key="category-label">श्रेणी</label>
+                <input type="text" id="course-category" data-lang-key="category-placeholder" placeholder="कोर्स की श्रेणी दर्ज करें">
             </div>
             <div class="form-group">
-                <label for="course-price">कीमत (₹)</label>
-                <input type="number" id="course-price" placeholder="कोर्स की कीमत दर्ज करें">
+                <label for="course-price" data-lang-key="price-label">कीमत (₹)</label>
+                <input type="number" id="course-price" data-lang-key="price-placeholder" placeholder="कोर्स की कीमत दर्ज करें">
             </div>
             <div class="form-group">
-                <label for="course-description">विवरण</label>
-                <textarea id="course-description" placeholder="कोर्स का विवरण दर्ज करें" rows="3"></textarea>
+                <label for="course-description" data-lang-key="description-label">विवरण</label>
+                <textarea id="course-description" data-lang-key="description-placeholder" placeholder="कोर्स का विवरण दर्ज करें" rows="3"></textarea>
             </div>
-            <button class="btn btn-primary" style="width: 100%;" id="save-course-btn">कोर्स सहेजें</button>
+            <button class="btn btn-primary" style="width: 100%;" id="save-course-btn" data-lang-key="save-course-btn">कोर्स सहेजें</button>
         </div>
     </div>
 
@@ -1163,47 +1163,47 @@
     <div class="modal" id="purchase-course-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="purchase-course-title">कोर्स खरीदें</h3>
+                <h3 id="purchase-course-title" data-lang-key="purchase-course">कोर्स खरीदें</h3>
                 <span class="close">&times;</span>
             </div>
             <div id="purchase-alert"></div>
             
             <div class="payment-options">
-                <h4>भुगतान विकल्प चुनें</h4>
+                <h4 data-lang-key="choose-payment">भुगतान विकल्प चुनें</h4>
                 <div class="payment-option">
                     <input type="radio" id="upi" name="payment-method" value="upi" checked>
                     <label for="upi">
                         <i class="fas fa-mobile-alt">📱</i>
-                        UPI भुगतान
+                        <span data-lang-key="upi-payment">UPI भुगतान</span>
                     </label>
                 </div>
                 <div class="payment-option">
                     <input type="radio" id="qr" name="payment-method" value="qr">
                     <label for="qr">
                         <i class="fas fa-qrcode">🔲</i>
-                        QR कोड स्कैन करें
+                        <span data-lang-key="qr-payment">QR कोड स्कैन करें</span>
                     </label>
                 </div>
             </div>
             
             <div id="upi-payment" class="payment-method">
                 <div class="form-group">
-                    <label for="upi-id">UPI ID</label>
-                    <input type="text" id="upi-id" placeholder="yourname@upi">
+                    <label for="upi-id" data-lang-key="upi-id-label">UPI ID</label>
+                    <input type="text" id="upi-id" data-lang-key="upi-id-placeholder" placeholder="yourname@upi">
                 </div>
-                <button class="btn btn-primary" style="width: 100%;" id="pay-with-upi">भुगतान करें</button>
+                <button class="btn btn-primary" style="width: 100%;" id="pay-with-upi" data-lang-key="pay-now-btn">भुगतान करें</button>
             </div>
             
             <div id="qr-payment" class="payment-method" style="display: none;">
                 <div class="qr-code">
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=UPI_ID:owner@tutorprakash&amp;amount=500" alt="QR Code">
-                    <p>उपरोक्त QR कोड स्कैन करके भुगतान करें</p>
+                    <p data-lang-key="scan-qr-instruction">उपरोक्त QR कोड स्कैन करके भुगतान करें</p>
                 </div>
                 <div class="form-group">
-                    <label for="transaction-id">लेन-देन ID</label>
-                    <input type="text" id="transaction-id" placeholder="भुगतान后 लेन-देन ID दर्ज करें">
+                    <label for="transaction-id" data-lang-key="transaction-id-label">लेन-देन ID</label>
+                    <input type="text" id="transaction-id" data-lang-key="transaction-id-placeholder" placeholder="भुगतान后 लेन-देन ID दर्ज करें">
                 </div>
-                <button class="btn btn-primary" style="width: 100%;" id="verify-payment">भुगतान सत्यापित करें</button>
+                <button class="btn btn-primary" style="width: 100%;" id="verify-payment" data-lang-key="verify-payment-btn">भुगतान सत्यापित करें</button>
             </div>
         </div>
     </div>
@@ -1212,18 +1212,238 @@
     <div class="modal" id="forgot-password-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>पासवर्ड रीसेट करें</h3>
+                <h3 data-lang-key="reset-password-title">पासवर्ड रीसेट करें</h3>
                 <span class="close">&times;</span>
             </div>
             <div class="form-group">
-                <label for="reset-email">ईमेल पता</label>
-                <input type="email" id="reset-email" placeholder="अपना ईमेल पता दर्ज करें">
+                <label for="reset-email" data-lang-key="email-label">ईमेल पता</label>
+                <input type="email" id="reset-email" data-lang-key="email-placeholder" placeholder="अपना ईमेल पता दर्ज करें">
             </div>
-            <button class="btn btn-primary" style="width: 100%;" id="reset-password-btn">पासवर्ड रीसेट लिंक भेजें</button>
+            <button class="btn btn-primary" style="width: 100%;" id="reset-password-btn" data-lang-key="send-reset-link-btn">पासवर्ड रीसेट लिंक भेजें</button>
         </div>
     </div>
 
     <script>
+        // Language translations
+        const translations = {
+            'hi': {
+                'app-title': 'TUTOR PRAKASH',
+                'nav-home': 'होम',
+                'nav-courses': 'कोर्सेज',
+                'nav-about': 'हमारे बारे में',
+                'nav-contact': 'संपर्क',
+                'login-btn': 'लॉग इन',
+                'signup-btn': 'रजिस्टर',
+                'dashboard-btn': 'डैशबोर्ड',
+                'logout-btn': 'लॉग आउट',
+                'hero-title': 'शिक्षा का बेहतरीन प्लेटफ़ॉर्म आपके दरवाजे पर',
+                'hero-desc': 'TUTOR PRAKASH एक रिवोल्यूशनरी टीचिंग ऐप है जो छात्रों को एक्सपर्ट एजुकेटर्स से जोड़ता है। हजारों कोर्सेज, इंटरएक्टिव लेसन्स और लर्निंग रिसोर्सेज तक पहुंचें।',
+                'start-learning-btn': 'अभी सीखना शुरू करें',
+                'hero-tagline': 'जानें, बढ़ें, सफल होें',
+                'login-tab': 'लॉग इन',
+                'signup-tab': 'रजिस्टर',
+                'login-title': 'अपने अकाउंट में लॉग इन करें',
+                'email-label': 'ईमेल',
+                'email-placeholder': 'अपना ईमेल दर्ज करें',
+                'password-label': 'पासवर्ड',
+                'password-placeholder': 'अपना पासवर्ड दर्ज करें',
+                'forgot-password': 'पासवर्ड भूल गए?',
+                'login-type-label': 'लॉग इन टाइप चुनें',
+                'student-option': 'छात्र',
+                'teacher-option': 'शिक्षक',
+                'owner-option': 'मालिक',
+                'login-submit': 'लॉग इन',
+                'signup-title': 'नया अकाउंट बनाएं',
+                'name-label': 'पूरा नाम',
+                'name-placeholder': 'अपना पूरा नाम दर्ज करें',
+                'password-create-placeholder': 'अपना पासवर्ड बनाएं',
+                'account-type-label': 'अकाउंट टाइप चुनें',
+                'signup-submit': 'अकाउंट बनाएं',
+                'student-dashboard-title': 'छात्र डैशबोर्ड',
+                'menu-title': 'मेन्यू',
+                'available-courses': 'उपलब्ध कोर्सेज',
+                'my-courses': 'मेरे कोर्सेज',
+                'purchase-history': 'खरीदी का इतिहास',
+                'profile': 'प्रोफाइल',
+                'course-name': 'कोर्स नाम',
+                'date': 'तारीख',
+                'price': 'कीमत',
+                'status': 'स्थिति',
+                'new-password-label': 'नया पासवर्ड (बदलने के लिए)',
+                'new-password-placeholder': 'नया पासवर्ड दर्ज करें',
+                'update-profile-btn': 'अपडेट प्रोफाइल',
+                'teacher-dashboard-title': 'शिक्षक डैशबोर्ड',
+                'add-course': 'नया कोर्स जोड़ें',
+                'earnings': 'आय विवरण',
+                'sales': 'बिक्री',
+                'actions': 'क्रियाएं',
+                'add-course-btn': 'नया कोर्स जोड़ें',
+                'course-name-label': 'कोर्स नाम',
+                'course-name-placeholder': 'कोर्स का नाम दर्ज करें',
+                'category-label': 'श्रेणी',
+                'category-placeholder': 'कोर्स की श्रेणी दर्ज करें',
+                'price-label': 'कीमत (₹)',
+                'price-placeholder': 'कोर्स की कीमत दर्ज करें',
+                'description-label': 'विवरण',
+                'description-placeholder': 'कोर्स का विवरण दर्ज करें',
+                'add-materials-label': 'कोर्स सामग्री जोड़ें',
+                'pdf-notes': 'PDF नोट्स',
+                'youtube-link': 'YouTube लिंक',
+                'youtube-placeholder': 'YouTube वीडियो लिंक',
+                'zoom-link': 'Zoom लिंक',
+                'zoom-placeholder': 'Zoom मीटिंग लिंक',
+                'save-course-btn': 'कोर्स सहेजें',
+                'total-earnings': 'कुल आय: ₹12,500',
+                'platform-fee-note': '(20% प्लेटफ़ॉर्म शुल्क घटाकर)',
+                'bank-details-label': 'बैंक खाता विवरण',
+                'bank-account-placeholder': 'बैंक खाता संख्या',
+                'ifsc-label': 'IFSC कोड',
+                'ifsc-placeholder': 'IFSC कोड',
+                'owner-dashboard-title': 'मालिक डैशबोर्ड',
+                'students': 'छात्र',
+                'teachers': 'शिक्षक',
+                'transactions': 'लेन-देन',
+                'courses': 'कोर्सेज',
+                'student-management': 'छात्र प्रबंधन',
+                'registration-date': 'पंजीकरण तिथि',
+                'active': 'सक्रिय',
+                'inactive': 'निष्क्रिय',
+                'disable-btn': 'अक्षम करें',
+                'enable-btn': 'सक्षम करें',
+                'teacher-management': 'शिक्षक प्रबंधन',
+                'expertise': 'विशेषज्ञता',
+                'transaction-history': 'लेन-देन इतिहास',
+                'transaction-id': 'लेन-देन ID',
+                'student': 'छात्र',
+                'course': 'कोर्स',
+                'teacher': 'शिक्षक',
+                'amount': 'राशि',
+                'all-courses': 'सभी कोर्सेज',
+                'add-course-modal-title': 'नया कोर्स जोड़ें',
+                'purchase-course': 'कोर्स खरीदें',
+                'choose-payment': 'भुगतान विकल्प चुनें',
+                'upi-payment': 'UPI भुगतान',
+                'qr-payment': 'QR कोड स्कैन करें',
+                'upi-id-label': 'UPI ID',
+                'upi-id-placeholder': 'yourname@upi',
+                'pay-now-btn': 'भुगतान करें',
+                'scan-qr-instruction': 'उपरोक्त QR कोड स्कैन करके भुगतान करें',
+                'transaction-id-label': 'लेन-देन ID',
+                'transaction-id-placeholder': 'भुगतान后 लेन-देन ID दर्ज करें',
+                'verify-payment-btn': 'भुगतान सत्यापित करें',
+                'reset-password-title': 'पासवर्ड रीसेट करें',
+                'send-reset-link-btn': 'पासवर्ड रीसेट लिंक भेजें'
+            },
+            'en': {
+                'app-title': 'TUTOR PRAKASH',
+                'nav-home': 'Home',
+                'nav-courses': 'Courses',
+                'nav-about': 'About Us',
+                'nav-contact': 'Contact',
+                'login-btn': 'Login',
+                'signup-btn': 'Register',
+                'dashboard-btn': 'Dashboard',
+                'logout-btn': 'Logout',
+                'hero-title': 'The Best Education Platform at Your Doorstep',
+                'hero-desc': 'TUTOR PRAKASH is a revolutionary teaching app that connects students with expert educators. Access thousands of courses, interactive lessons, and learning resources.',
+                'start-learning-btn': 'Start Learning Now',
+                'hero-tagline': 'Learn, Grow, Succeed',
+                'login-tab': 'Login',
+                'signup-tab': 'Register',
+                'login-title': 'Login to Your Account',
+                'email-label': 'Email',
+                'email-placeholder': 'Enter your email',
+                'password-label': 'Password',
+                'password-placeholder': 'Enter your password',
+                'forgot-password': 'Forgot Password?',
+                'login-type-label': 'Select Login Type',
+                'student-option': 'Student',
+                'teacher-option': 'Teacher',
+                'owner-option': 'Owner',
+                'login-submit': 'Login',
+                'signup-title': 'Create New Account',
+                'name-label': 'Full Name',
+                'name-placeholder': 'Enter your full name',
+                'password-create-placeholder': 'Create your password',
+                'account-type-label': 'Select Account Type',
+                'signup-submit': 'Create Account',
+                'student-dashboard-title': 'Student Dashboard',
+                'menu-title': 'Menu',
+                'available-courses': 'Available Courses',
+                'my-courses': 'My Courses',
+                'purchase-history': 'Purchase History',
+                'profile': 'Profile',
+                'course-name': 'Course Name',
+                'date': 'Date',
+                'price': 'Price',
+                'status': 'Status',
+                'new-password-label': 'New Password (to change)',
+                'new-password-placeholder': 'Enter new password',
+                'update-profile-btn': 'Update Profile',
+                'teacher-dashboard-title': 'Teacher Dashboard',
+                'add-course': 'Add New Course',
+                'earnings': 'Earnings Details',
+                'sales': 'Sales',
+                'actions': 'Actions',
+                'add-course-btn': 'Add New Course',
+                'course-name-label': 'Course Name',
+                'course-name-placeholder': 'Enter course name',
+                'category-label': 'Category',
+                'category-placeholder': 'Enter course category',
+                'price-label': 'Price (₹)',
+                'price-placeholder': 'Enter course price',
+                'description-label': 'Description',
+                'description-placeholder': 'Enter course description',
+                'add-materials-label': 'Add Course Materials',
+                'pdf-notes': 'PDF Notes',
+                'youtube-link': 'YouTube Link',
+                'youtube-placeholder': 'YouTube video link',
+                'zoom-link': 'Zoom Link',
+                'zoom-placeholder': 'Zoom meeting link',
+                'save-course-btn': 'Save Course',
+                'total-earnings': 'Total Earnings: ₹12,500',
+                'platform-fee-note': '(after 20% platform fee)',
+                'bank-details-label': 'Bank Account Details',
+                'bank-account-placeholder': 'Bank account number',
+                'ifsc-label': 'IFSC Code',
+                'ifsc-placeholder': 'IFSC Code',
+                'owner-dashboard-title': 'Owner Dashboard',
+                'students': 'Students',
+                'teachers': 'Teachers',
+                'transactions': 'Transactions',
+                'courses': 'Courses',
+                'student-management': 'Student Management',
+                'registration-date': 'Registration Date',
+                'active': 'Active',
+                'inactive': 'Inactive',
+                'disable-btn': 'Disable',
+                'enable-btn': 'Enable',
+                'teacher-management': 'Teacher Management',
+                'expertise': 'Expertise',
+                'transaction-history': 'Transaction History',
+                'transaction-id': 'Transaction ID',
+                'student': 'Student',
+                'course': 'Course',
+                'teacher': 'Teacher',
+                'amount': 'Amount',
+                'all-courses': 'All Courses',
+                'add-course-modal-title': 'Add New Course',
+                'purchase-course': 'Purchase Course',
+                'choose-payment': 'Choose Payment Option',
+                'upi-payment': 'UPI Payment',
+                'qr-payment': 'Scan QR Code',
+                'upi-id-label': 'UPI ID',
+                'upi-id-placeholder': 'yourname@upi',
+                'pay-now-btn': 'Pay Now',
+                'scan-qr-instruction': 'Scan the QR code above to pay',
+                'transaction-id-label': 'Transaction ID',
+                'transaction-id-placeholder': 'Enter transaction ID after payment',
+                'verify-payment-btn': 'Verify Payment',
+                'reset-password-title': 'Reset Password',
+                'send-reset-link-btn': 'Send Reset Link'
+            }
+        };
+
         // Data storage (in a real app, this would be a backend)
         const users = JSON.parse(localStorage.getItem('users')) || [
             { id: 1, email: 'admin@tutorprakash.com', password: 'admin123', name: 'एडमिन यूजर', role: 'admin' },
@@ -1297,6 +1517,35 @@
         let currentCourseToPurchase = null;
         let currentLanguage = 'hi';
         
+        // Function to change language
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update language buttons
+            languageButtons.forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Update all elements with data-lang-key attribute
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    if (element.placeholder) {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Update page title
+            document.title = translations[lang]['app-title'] + ' - ' + translations[lang]['hero-title'].substring(0, 20) + '...';
+        }
+        
         // Initialize the app
         function initApp() {
             // Check if user is logged in
@@ -1361,8 +1610,8 @@
                         <h3>${course.name}</h3>
                         <p>${course.description}</p>
                         <p class="price">₹${course.price}</p>
-                        <p>श्रेणी: ${course.category}</p>
-                        <button class="btn btn-primary" style="width: 100%;" data-course-id="${course.id}">कोर्स खरीदें</button>
+                        <p>${currentLanguage === 'hi' ? 'श्रेणी' : 'Category'}: ${course.category}</p>
+                        <button class="btn btn-primary" style="width: 100%;" data-course-id="${course.id}">${currentLanguage === 'hi' ? 'कोर्स खरीदें' : 'Buy Course'}</button>
                     </div>
                 `;
                 
@@ -1399,9 +1648,9 @@
                         <div class="course-content">
                             <h3>${course.name}</h3>
                             <p>${course.description}</p>
-                            <p class="price">खरीदा गया: ₹${course.price}</p>
-                            <p>श्रेणी: ${course.category}</p>
-                            <button class="btn btn-primary" style="width: 100%;">कोर्स एक्सेस करें</button>
+                            <p class="price">${currentLanguage === 'hi' ? 'खरीदा गया' : 'Purchased'}: ₹${course.price}</p>
+                            <p>${currentLanguage === 'hi' ? 'श्रेणी' : 'Category'}: ${course.category}</p>
+                            <button class="btn btn-primary" style="width: 100%;">${currentLanguage === 'hi' ? 'कोर्स एक्सेस करें' : 'Access Course'}</button>
                         </div>
                     `;
                     
@@ -1420,7 +1669,7 @@
                     <td>${course ? course.name : 'N/A'}</td>
                     <td>${new Date(purchase.date).toLocaleDateString('hi-IN')}</td>
                     <td>₹${purchase.amount}</td>
-                    <td>पूर्ण</td>
+                    <td>${currentLanguage === 'hi' ? 'पूर्ण' : 'Completed'}</td>
                 `;
                 
                 purchaseHistoryBody.appendChild(row);
@@ -1447,8 +1696,8 @@
                     <td>₹${course.price}</td>
                     <td>15</td>
                     <td>
-                        <button class="btn btn-success btn-sm">संपादित</button>
-                        <button class="btn btn-danger btn-sm">हटाएं</button>
+                        <button class="btn btn-success btn-sm">${currentLanguage === 'hi' ? 'संपादित' : 'Edit'}</button>
+                        <button class="btn btn-danger btn-sm">${currentLanguage === 'hi' ? 'हटाएं' : 'Delete'}</button>
                     </td>
                 `;
                 
@@ -1474,7 +1723,7 @@
             
             if (course) {
                 currentCourseToPurchase = course;
-                document.getElementById('purchase-course-title').textContent = `${course.name} खरीदें - ₹${course.price}`;
+                document.getElementById('purchase-course-title').textContent = `${currentLanguage === 'hi' ? 'कोर्स खरीदें' : 'Purchase Course'} - ₹${course.price}`;
                 
                 // Update QR code with course price
                 const qrImg = document.querySelector('.qr-code img');
@@ -1543,10 +1792,10 @@
             const user = users.find(u => u.email === email);
             
             if (user) {
-                alert('पासवर्ड रीसेट लिंक आपके ईमेल पर भेज दिया गया है!');
+                alert(currentLanguage === 'hi' ? 'पासवर्ड रीसेट लिंक आपके ईमेल पर भेज दिया गया है!' : 'Password reset link has been sent to your email!');
                 forgotPasswordModal.style.display = 'none';
             } else {
-                alert('यह ईमेल पता रजिस्टर्ड नहीं है!');
+                alert(currentLanguage === 'hi' ? 'यह ईमेल पता रजिस्टर्ड नहीं है!' : 'This email address is not registered!');
             }
         });
         
@@ -1554,12 +1803,18 @@
         languageButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const lang = this.getAttribute('data-lang');
-                languageButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                currentLanguage = lang;
+                changeLanguage(lang);
                 
-                // In a real app, you would load translations here
-                alert(`Language changed to ${lang === 'hi' ? 'Hindi' : 'English'}`);
+                // Reload dynamic content with new language
+                if (currentUser) {
+                    if (currentUser.role === 'student') {
+                        loadStudentDashboard();
+                    } else if (currentUser.role === 'teacher') {
+                        loadTeacherDashboard();
+                    }
+                } else {
+                    loadCourses();
+                }
             });
         });
         
@@ -1599,9 +1854,9 @@
                 initApp();
                 
                 // Show success message
-                alert('लॉगिन सफल!');
+                alert(currentLanguage === 'hi' ? 'लॉगिन सफल!' : 'Login successful!');
             } else {
-                alert('अमान्य क्रेडेंशियल्स! कृपया पुनः प्रयास करें।');
+                alert(currentLanguage === 'hi' ? 'अमान्य क्रेडेंशियल्स! कृपया पुनः प्रयास करें।' : 'Invalid credentials! Please try again.');
             }
         });
         
@@ -1616,7 +1871,7 @@
             
             // Check if user already exists
             if (users.some(u => u.email === email)) {
-                alert('इस ईमेल के साथ उपयोगकर्ता पहले से मौजूद है!');
+                alert(currentLanguage === 'hi' ? 'इस ईमेल के साथ उपयोगकर्ता पहले से मौजूद है!' : 'User with this email already exists!');
                 return;
             }
             
@@ -1632,7 +1887,7 @@
             users.push(newUser);
             localStorage.setItem('users', JSON.stringify(users));
             
-            alert('पंजीकरण सफल! कृपया लॉगिन करें।');
+            alert(currentLanguage === 'hi' ? 'पंजीकरण सफल! कृपया लॉगिन करें।' : 'Registration successful! Please login.');
             
             // Switch to login form
             document.querySelector('[data-tab="login"]').click();
@@ -1672,7 +1927,7 @@
                     // Reload courses
                     loadCourses();
                     
-                    alert('कोर्स सफलतापूर्वक जोड़ा गया!');
+                    alert(currentLanguage === 'hi' ? 'कोर्स सफलतापूर्वक जोड़ा गया!' : 'Course added successfully!');
                     addCourseModal.style.display = 'none';
                     
                     // Clear form
@@ -1681,7 +1936,7 @@
                     document.getElementById('course-price').value = '';
                     document.getElementById('course-description').value = '';
                 } else {
-                    alert('कृपया सभी फ़ील्ड भरें!');
+                    alert(currentLanguage === 'hi' ? 'कृपया सभी फ़ील्ड भरें!' : 'Please fill all fields!');
                 }
             });
         }
@@ -1699,7 +1954,7 @@
             if (transactionId) {
                 processPayment('qr', transactionId);
             } else {
-                alert('कृपया लेन-देन ID दर्ज करें!');
+                alert(currentLanguage === 'hi' ? 'कृपया लेन-देन ID दर्ज करें!' : 'Please enter transaction ID!');
             }
         });
         
@@ -1721,7 +1976,7 @@
             
             // Show success message
             const alertDiv = document.getElementById('purchase-alert');
-            alertDiv.innerHTML = `<div class="alert alert-success">भुगतान सफल! कोर्स अब आपके अकाउंट में है।</div>`;
+            alertDiv.innerHTML = `<div class="alert alert-success">${currentLanguage === 'hi' ? 'भुगतान सफल! कोर्स अब आपके अकाउंट में है।' : 'Payment successful! The course is now in your account.'}</div>`;
             
             // Reload student dashboard
             loadStudentDashboard();
@@ -1755,10 +2010,10 @@
                     currentUser = users[userIndex];
                     localStorage.setItem('currentUser', JSON.stringify(currentUser));
                     
-                    alert('प्रोफाइल सफलतापूर्वक अपडेट की गई!');
+                    alert(currentLanguage === 'hi' ? 'प्रोफाइल सफलतापूर्वक अपडेट की गई!' : 'Profile updated successfully!');
                 }
             } else {
-                alert('कृपया नाम दर्ज करें!');
+                alert(currentLanguage === 'hi' ? 'कृपया नाम दर्ज करें!' : 'Please enter name!');
             }
         });
         
